@@ -3,11 +3,12 @@ import Todo from "./components/Todo.jsx";
 import Title from "./components/Title.jsx";
 import Modal from "./components/Modal.jsx";
 import React, { useState } from 'react';
+import Counter from "./components/Counter.jsx"
 
 function App() {
   const [showModal, setShowModal] = useState(false) 
 
-
+  return <Counter/>
   return (
     <div>
       <Title />
@@ -26,6 +27,7 @@ function App() {
         <Todo title="Land a job" />
       </div>
       {showModal && <Modal title="Confirm Delete?" />}
+     
     </div>
   );
 }
